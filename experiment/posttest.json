@@ -1,18 +1,74 @@
 [
-{"question":"This is a Sample Question 1?",
+{"question":"1. Assume a=5, b=0 and c=-2. Calculate  (a |b )>c",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"0",
+            "b":"1",
+            "c":"5",
+            "d":"-2"
           },
-"correctAnswer":"a"},
-{"question":"This is a Sample Question 2?",
+ "correctAnswer":"b"},
+    {"question":"2. Assume a=5, b=0 and c=-2. Calculate (a&c)*b%2",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"0",
+            "b":"2",
+            "c":"5",
+            "d":"1"
           },
-"correctAnswer":"c"} 
+     "correctAnswer":"a"},
+    {"question":"3. Assume a=5, b=0 and c=-2. Calculate b++>c",
+"answers":{
+            "a":"0",
+            "b":"1",
+            "c":"-2",
+            "d":"-1"
+          },
+     "correctAnswer":"b"},
+    {"question":"4. Assume a=5, b=0 and c=-2. Calculate a>((a-2==3)?1:0)",
+"answers":{
+            "a":"0",
+            "b":"1",
+            "c":"2",
+            "d":"3"
+          },
+"correctAnswer":"b"},
+{"question":"5. Assume a='E' , b='5' and c='?' are char type variables. Calculate b-2",
+"answers":{
+            "a":"C",
+            "b":"A",
+            "c":"c",
+            "d":"a"
+          },
+ "correctAnswer":"a"},
+    {"question":"Assume a='E' , b='5' and c='?' are char type variables. Calculate b+c",
+"answers":{
+            "a":"t",
+            "b":"s",
+            "c":"T",
+            "d":"r"
+          },
+     "correctAnswer":"b"},
+    {"question":"6. Assume a='E' , b='5' and c='?' are char type variables. Calculate a%c",
+"answers":{
+            "a":"0",
+            "b":"1",
+            "c":"6",
+            "d":"9"
+          },
+     "correctAnswer":"c"},
+    {"question":"7. Assume a='E' , b='5' and c='?' are char type variables. Calculate a*'3'",
+"answers":{
+            "a":"0",
+            "b":"1",
+            "c":"207",
+            "d":"69"
+          },
+     "correctAnswer":"c"},
+    {"question":"8. Assume a='E' , b='5' and c='?' are char type variables. Calculate b-2",
+"answers":{
+            "a":"0",
+            "b":"1",
+            "c":"97",
+            "d":"3519"
+          },
+"correctAnswer":"d"}
 ]
