@@ -14,7 +14,7 @@
             "c":"8",
             "d":"4"
           },
-"correctAnswer":"a"} 
+ "correctAnswer":"a"}, 
 {"question":"3. The order of evaluation of the operators in (2*(3+5))%3 is: ",
 "answers":{
             "a":"+, *, %",
@@ -22,7 +22,7 @@
             "c":"%, *, +",
             "d":"4"
           },
- "correctAnswer":"a"}
+ "correctAnswer":"a"},
     {"question":"4. The order of evaluation of the operators in 2*(3+5)%3 is:",
 "answers":{
             "a":"+, *, %",
@@ -30,7 +30,7 @@
             "c":"%, *, +",
             "d":"+, %, *"
           },
-     "correctAnswer":"a"}
+     "correctAnswer":"a"},
 
        {"question":"5 Assume x=8.8, y=3.5 and z= -5.2 and m=4. Calculate x%y",
 "answers":{
@@ -39,7 +39,7 @@
             "c":"0.8",
             "d":"7"
           },
-	"correctAnswer":"a"}
+	"correctAnswer":"a"},
         {"question":"6. Assume x=8.8, y=3.5 and z= -5.2 and m=4, Calculate x%m",
 "answers":{
             "a":"8",
@@ -47,7 +47,7 @@
             "c":"1.8",
             "d":"0.8"
           },
-	 "correctAnswer":"b"}
+	 "correctAnswer":"b"},
         {"question":"7. Assume x=8.8, y=3.5 and z= -5.2 and m=4, Calculate 7/m",
 "answers":{
             "a":"0",
@@ -55,7 +55,7 @@
             "c":"2",
             "d":"3"
           },
-	 "correctAnswer":"b"}
+	 "correctAnswer":"b"},
             {"question":"8. Assume x=8.8, y=3.5 and z= -5.2 and m=4, Calculate 2*x/(3*y)",
 "answers":{
             "a":"1.67",
@@ -63,7 +63,7 @@
             "c":"1",
             "d":"1.5"
           },
-	     "correctAnswer":"a"}
+	     "correctAnswer":"a"},
             {"question":"9. Assume x=8.8, y=3.5 and z= -5.2 and m=4, Calculate 2*x/3*y",
 "answers":{
             "a":"5.86",
