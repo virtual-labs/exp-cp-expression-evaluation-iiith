@@ -1,10 +1,10 @@
 [
-{"question":"This is a Sample Question 1?",
+{"question":"Evaluate 2 * 3 + 5 % 3.",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"1",
+            "b":"7",
+            "c":"8",
+            "d":"2"
           },
 "correctAnswer":"a"},
 {"question":"This is a Sample Question 2?",

@@ -15,7 +15,11 @@ Examples of expressions:
     Here also, the use of parenthesis has helped us in evaluating the expression the way we need it.  
     
 
-An expression used in a computer program is very similar to an algebraic expression and when many operators are specified in an expression, then the evaluation takes place according to the precedence of operators. The order of the precedence is given by a [table of precedence](http://cse02-iiith.vlabs.ac.in/exp10/table.html).  
+An expression used in a computer program is very similar to an algebraic expression and when many operators are specified in an expression, then the evaluation takes place according to the precedence of operators. The order of the precedence is given below.
+
+<img src="images/table.png">
+
+
 
 A parenthesis can be used to override the precedence of operators and force the evaluation of a sub-expression within an expression. Expression is evaluated according to associativity of the operator. The associativity of the operator is a property that determines how operators of the same precedence are grouped in the absence of parenthesis. The objective in evaluating an expression is to consider the precedence and associativity of the individual operators and compute the value of the sub-expressions.
 
