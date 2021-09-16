@@ -20,12 +20,6 @@ An expression used in a computer program is very similar to an algebraic express
 <img src="images/table.png">
 
 
-
 A parenthesis can be used to override the precedence of operators and force the evaluation of a sub-expression within an expression. Expression is evaluated according to associativity of the operator. The associativity of the operator is a property that determines how operators of the same precedence are grouped in the absence of parenthesis. The objective in evaluating an expression is to consider the precedence and associativity of the individual operators and compute the value of the sub-expressions.
 
-#### Objective
-
-1.  To learn about different types of operators.
-2.  To learn about the precedence of the operators.
-3.  To learn how to evaluate an expression.
 
