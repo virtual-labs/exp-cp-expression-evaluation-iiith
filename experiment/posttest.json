@@ -36,12 +36,12 @@
 "correctAnswer":"b"},
 {"question":"5. Assume a='E' , b='5' and c='?' are char type variables. Calculate b-2",
 "answers":{
-            "a":"C",
-            "b":"A",
-            "c":"c",
-            "d":"a"
+            "a":"'1'",
+            "b":"'2'",
+            "c":"'3'",
+            "d":"'4'"
           },
- "correctAnswer":"a"},
+ "correctAnswer":"c"},
 
 {"question":"6. Assume a='E' , b='5' and c='?' are char type variables. Calculate b+c",
 "answers":{
@@ -50,7 +50,7 @@
             "c":"T",
             "d":"r"
           },
-     "correctAnswer":"b"},
+     "correctAnswer":"a"},
 
 {"question":"7. Assume a='E' , b='5' and c='?' are char type variables. Calculate a%c",
 "answers":{
@@ -66,16 +66,16 @@
             "a":"0",
             "b":"1",
             "c":"207",
-            "d":"69"
+            "d":"3519"
           },
-     "correctAnswer":"c"},
+     "correctAnswer":"d"},
 
-{"question":"9. Assume a='E' , b='5' and c='?' are char type variables. Calculate b-2",
+{"question":"9. Assume a='E' , b='5' and c='?' are char type variables. Calculate b-3",
 "answers":{
             "a":"0",
-            "b":"1",
+            "b":"50",
             "c":"97",
             "d":"3519"
           },
-"correctAnswer":"d"}
+"correctAnswer":"b"}
 ]

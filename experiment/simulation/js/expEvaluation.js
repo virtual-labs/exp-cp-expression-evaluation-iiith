@@ -820,6 +820,7 @@ window.view = {
 		this.step ++
 		parent.appendChild(div)
 		this.printSingleStep(stringToEval)
+		console.log('Expression'-this.expression, this.starting, this.ending)
 		this.showIllustration(this.expression)
 	},
 	printSingleStep: function (string) {
@@ -840,33 +841,68 @@ window.view = {
 			element.innerHTML = string + '&emsp;' + '=' + '&emsp;' + method()
 	},
 	showIllustration: function (equation) {
-		var parent = document.getElementById('reasoningStep')
-		var child = document.createElement('p')
-		if ( model.isBracket === true ) {
-			var span = document.createElement('span')
-			span.innerHTML =  this.step - 1 + ' ) ' + 'Here brackets have higher precedence than other operators and in case of more than one brackets, the brackets will be solved from left to right fashion.<br>'
-			span.className = 'illustrationText'
-			child.appendChild(span)
-			model.isBracket = false
-		}
-		else {
-			if ( equation.length > 2 ) {
-				var eq = equation.substring(this.starting, this.ending + 1)
-				var operator = ''
-				for ( var i = 0 ; i < eq.length ; i ++ ) {
-					if ( eq[i] === '+' || eq[i] === '-' || eq[i] === '/' || eq[i] === '*' || eq[i] === '%' )  {
-						operator = eq[i]
-						break
-					}
-				}
-				var span = document.createElement('span')
-				span.innerHTML =  this.step - 1 + ' ) ' + 'Here ' + operator + ' have higher precedence than other operators. So, it will be solved first.<br>'
-				span.className = 'illustrationText'
-				child.appendChild(span)	
-			}	
-		}
-		parent.appendChild(child)
-	},
+   const parent = document.getElementById('reasoningStep');
+    const step = document.createElement('p');
+    
+    // Helper function to create explanation span
+    function createExplanation(text) {
+        const span = document.createElement('span');
+        span.className = 'illustrationText';
+        span.innerHTML = `${text}<br>`;
+        return span;
+    }
+
+    // Handle bracket explanation
+    if (this.isBracket) {
+        const explanation = createExplanation(
+            'Brackets have higher precedence than other operators and are solved from left to right.'
+        );
+        step.appendChild(explanation);
+        this.isBracket = false;
+        parent.appendChild(step);
+        return;
+    }
+
+    // Only process if there's an actual operation to explain
+    if (equation.length <= 2) {
+        return;
+    }
+
+    const eq = equation.substring(this.starting, this.ending + 1);
+    
+    // Define operator properties
+    const operators = {
+        '+': { precedence: 1, name: 'addition' },
+        '-': { precedence: 1, name: 'subtraction' },
+        '*': { precedence: 2, name: 'multiplication' },
+        '/': { precedence: 2, name: 'division' },
+        '%': { precedence: 2, name: 'modulo' }
+    };
+
+    // Find the operator with highest precedence
+    let foundOperator = null;
+    let highestPrecedence = 0;
+
+    for (const char of eq) {
+        const operator = operators[char];
+        if (operator && operator.precedence > highestPrecedence) {
+            foundOperator = char;
+            highestPrecedence = operator.precedence;
+        }
+    }
+
+    if (foundOperator) {
+        const explanation = createExplanation(
+            highestPrecedence === 2 
+                ? this.step-1+')' +" "+`The ${operators[foundOperator].name} operator (${foundOperator}) has higher precedence than other operators and will be processed.`
+                : this.step-1+')' +" "+ `Now the ${operators[foundOperator].name} operator (${foundOperator}) will be processed.`
+        );
+        step.appendChild(explanation);
+    }
+
+    parent.appendChild(step);
+},
+
 	evaluate: function () {
 		if(this.starting == -1 && this.countNext != 0) {
 			alert('Evaluation Complete');
