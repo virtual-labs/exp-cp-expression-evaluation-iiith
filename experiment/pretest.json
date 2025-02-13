@@ -8,7 +8,7 @@
           },
 "correctAnswer":"c"},
 
-{"question":"2. Evaluate (2*(3+5))%3.",
+{"question":"2. Evaluate ( 2 * ( 3 + 5 ) ) % 3.",
 "answers":{
             "a":"1",
             "b":"7",
@@ -17,7 +17,7 @@
           },
  "correctAnswer":"a"}, 
 
-{"question":"3. The order of evaluation of the operators in (2*(3+5))%3 is: ",
+{"question":"3. The order of evaluation of the operators in ( 2 * ( 3 + 5 ) ) % 3 is: ",
 "answers":{
             "a":"+, *, %",
             "b":"*, +, %",
@@ -26,7 +26,7 @@
           },
  "correctAnswer":"a"},
 
-{"question":"4. The order of evaluation of the operators in 2*(3+5)%3 is:",
+{"question":"4. The order of evaluation of the operators in 2 * ( 3 + 5 ) % 3 is:",
 "answers":{
             "a":"+, *, %",
             "b":"*, +, %",
@@ -35,7 +35,7 @@
           },
      "correctAnswer":"a"},
 
-{"question":"5 Assume x=8.8, y=3.5 and z= -5.2 and m=4. Calculate x%y",
+{"question":"5. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4. Calculate x % y",
 "answers":{
             "a":"1.8",
             "b":"3.5",
@@ -44,7 +44,7 @@
           },
 	"correctAnswer":"a"},
 
-{"question":"6. Assume x=8.8, y=3.5 and z= -5.2 and m=4, Calculate x%m",
+{"question":"6. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4, Calculate x % m",
 "answers":{
             "a":"8",
             "b":"4",
@@ -53,7 +53,7 @@
           },
 	 "correctAnswer":"d"},
 
-{"question":"7. Assume x=8.8, y=3.5 and z= -5.2 and m=4, Calculate 7/m",
+{"question":"7. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4, Calculate 7/m",
 "answers":{
             "a":"0",
             "b":"1",
@@ -62,7 +62,7 @@
           },
 	 "correctAnswer":"b"},
 
-{"question":"8. Assume x=8.8, y=3.5 and z= -5.2 and m=4, Calculate 2*x/(3*y)",
+{"question":"8. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4, Calculate 2 * x / (3 * y)",
 "answers":{
             "a":"1.67",
             "b":"2",
@@ -71,7 +71,7 @@
           },
 	     "correctAnswer":"a"},
 
-{"question":"9. Assume x=8.8, y=3.5 and z= -5.2 and m=4, Calculate 2*x/3*y",
+{"question":"9. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4, Calculate 2 * x / 3 * y",
 "answers":{
             "a":"5.86",
             "b":"20.51",
