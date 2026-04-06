@@ -1,81 +1,149 @@
-[
-{"question":"1. Assume a=5, b=0 and c=-2. Calculate  (a |b )>c",
-"answers":{
-            "a":"0",
-            "b":"1",
-            "c":"5",
-            "d":"-2"
-          },
- "correctAnswer":"b"},
-
-{"question":"2. Assume a=5, b=0 and c=-2. Calculate (a&c)*b%2",
-"answers":{
-            "a":"0",
-            "b":"2",
-            "c":"5",
-            "d":"1"
-          },
-     "correctAnswer":"a"},
-
-{"question":"3. Assume a=5, b=0 and c=-2. Calculate b++>c",
-"answers":{
-            "a":"0",
-            "b":"1",
-            "c":"-2",
-            "d":"-1"
-          },
-     "correctAnswer":"b"},
-
-{"question":"4. Assume a=5, b=0 and c=-2. Calculate a>((a-2==3)?1:0)",
-"answers":{
-            "a":"0",
-            "b":"1",
-            "c":"2",
-            "d":"3"
-          },
-"correctAnswer":"b"},
-{"question":"5. Assume a='E' , b='5' and c='?' are char type variables. Calculate b-2",
-"answers":{
-            "a":"'1'",
-            "b":"'2'",
-            "c":"'3'",
-            "d":"'4'"
-          },
- "correctAnswer":"c"},
-
-{"question":"6. Assume a='E' , b='5' and c='?' are char type variables. Calculate b+c",
-"answers":{
-            "a":"t",
-            "b":"s",
-            "c":"T",
-            "d":"r"
-          },
-     "correctAnswer":"a"},
-
-{"question":"7. Assume a='E' , b='5' and c='?' are char type variables. Calculate a%c",
-"answers":{
-            "a":"0",
-            "b":"1",
-            "c":"6",
-            "d":"9"
-          },
-     "correctAnswer":"c"},
-
-{"question":"8. Assume a='E' , b='5' and c='?' are char type variables. Calculate a*'3'",
-"answers":{
-            "a":"0",
-            "b":"1",
-            "c":"207",
-            "d":"3519"
-          },
-     "correctAnswer":"d"},
-
-{"question":"9. Assume a='E' , b='5' and c='?' are char type variables. Calculate b-3",
-"answers":{
-            "a":"0",
-            "b":"50",
-            "c":"97",
-            "d":"3519"
-          },
-"correctAnswer":"b"}
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Assume a = 5, b = 0 and c = -2. Calculate ( a | b ) > c",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "5",
+        "d": "-2"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect, (a | b) = 5 | 0 = 5, 5 > -2 is true, so 0 is not correct.",
+        "b": "Correct. (a | b) = 5 | 0 = 5, 5 > -2 is true, so 1 is correct.",
+        "c": "Incorrect, 5 is the value of (a | b), not the result of the comparison.",
+        "d": "Incorrect, -2 is the value of c, not the result of the comparison."
+      }
+    },
+    {
+      "question": "2. Assume a = 5, b = 0 and c = -2. Calculate ( a & c ) * b % 2",
+      "answers": {
+        "a": "0",
+        "b": "2",
+        "c": "5",
+        "d": "1"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. (a & c) = 5 & -2 = 4, 4 * 0 = 0, 0 % 2 = 0.",
+        "b": "Incorrect, (a & c) = 4, 4 * 0 = 0, 0 % 2 = 0, so 2 is not correct.",
+        "c": "Incorrect, 5 is the value of a, not the result of the expression.",
+        "d": "Incorrect, 1 is not the result of the expression."
+      }
+    },
+    {
+      "question": "3. Assume a = 5, b = 0 and c = -2. Calculate b++ > c",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "-2",
+        "d": "-1"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect, b++ = 0, c = -2, 0 > -2 is true, so 0 is not correct.",
+        "b": "Correct. b++ = 0, c = -2, 0 > -2 is true, so 1 is correct.",
+        "c": "Incorrect, -2 is the value of c, not the result of the comparison.",
+        "d": "Incorrect, -1 is not the result of the comparison."
+      }
+    },
+    {
+      "question": "4. Assume a = 5, b = 0 and c = -2. Calculate a > (( a - 2 == 3 ) ? 1 : 0 )",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect, (a - 2 == 3) is true, so the ternary returns 1, 5 > 1 is true, so 0 is not correct.",
+        "b": "Correct. (a - 2 == 3) is true, so ternary returns 1, 5 > 1 is true, so 1 is correct.",
+        "c": "Incorrect, 2 is not the result of the comparison.",
+        "d": "Incorrect, 3 is not the result of the comparison."
+      }
+    },
+    {
+      "question": "5. Assume a = 'E', b = '5' and c = '?' are char type variables. Calculate b - 2",
+      "answers": {
+        "a": "'1'",
+        "b": "'2'",
+        "c": "'3'",
+        "d": "'4'"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect, ASCII value of '5' is 53, 53 - 2 = 51, which is '3'. '1' is not correct.",
+        "b": "Incorrect, ASCII value of '5' is 53, 53 - 2 = 51, which is '3'. '2' is not correct.",
+        "c": "Correct. ASCII value of '5' is 53, 53 - 2 = 51, which is '3'.",
+        "d": "Incorrect, ASCII value of '5' is 53, 53 - 2 = 51, which is '3'. '4' is not correct."
+      }
+    },
+    {
+      "question": "6. Assume a = 'E', b = '5' and c = '?' are char type variables. Calculate b + c",
+      "answers": {
+        "a": "t",
+        "b": "s",
+        "c": "T",
+        "d": "r"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. ASCII value of '5' is 53, '?' is 63, 53 + 63 = 116, which is 't'.",
+        "b": "Incorrect, 53 + 63 = 116, which is 't', not 's'.",
+        "c": "Incorrect, 53 + 63 = 116, which is 't', not 'T'.",
+        "d": "Incorrect, 53 + 63 = 116, which is 't', not 'r'."
+      }
+    },
+    {
+      "question": "7. Assume a = 'E', b = '5' and c = '?' are char type variables. Calculate a % c",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "6",
+        "d": "9"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect, ASCII value of 'E' is 69, '?' is 63, 69 % 63 = 6, so 0 is not correct.",
+        "b": "Incorrect, 69 % 63 = 6, so 1 is not correct.",
+        "c": "Correct. 69 % 63 = 6, so 6 is correct.",
+        "d": "Incorrect, 69 % 63 = 6, so 9 is not correct."
+      }
+    },
+    {
+      "question": "8. Assume a = 'E', b = '5' and c = '?' are char type variables. Calculate a * '3'",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "207",
+        "d": "3519"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect, ASCII value of 'E' is 69, '3' is 51, 69 * 51 = 3519, so 0 is not correct.",
+        "b": "Incorrect, 69 * 51 = 3519, so 1 is not correct.",
+        "c": "Incorrect, 69 * 51 = 3519, so 207 is not correct.",
+        "d": "Correct. ASCII value of 'E' is 69, '3' is 51, 69 * 51 = 3519, so 3519 is correct."
+      }
+    },
+    {
+      "question": "9. Assume a = 'E', b = '5' and c = '?' are char type variables. Calculate b - 3",
+      "answers": {
+        "a": "0",
+        "b": "50",
+        "c": "97",
+        "d": "3519"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect, ASCII value of '5' is 53, 53 - 3 = 50, so 0 is not correct.",
+        "b": "Correct. ASCII value of '5' is 53, 53 - 3 = 50, so 50 is correct.",
+        "c": "Incorrect, 97 is not the result of 53 - 3.",
+        "d": "Incorrect, 3519 is not the result of 53 - 3."
+      }
+    }
+  ]
+}
