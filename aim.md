@@ -1,0 +1,1 @@
+The aim of this experiment is to accurately evaluate mathematical and logical expressions in programming. This includes parsing the expression, understanding its structure (operators, operands, and precedence), and executing the calculations to obtain the correct final result.

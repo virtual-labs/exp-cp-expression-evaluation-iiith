@@ -1,0 +1,11 @@
+
+/home/runner/work/exp-cp-expression-evaluation-iiith/exp-cp-expression-evaluation-iiith/experiment/simulation/js/expEvaluation.js
+  909:7  error  Parsing error: Assigning to rvalue
+
+/home/runner/work/exp-cp-expression-evaluation-iiith/exp-cp-expression-evaluation-iiith/experiment/simulation/js/mobile-detection.js
+  293:7   warning  'mobileDetection' is assigned a value but never used  no-unused-vars
+  296:38  warning  'module' is not defined                               no-undef
+  297:3   warning  'module' is not defined                               no-undef
+
+✖ 4 problems (1 error, 3 warnings)
+
