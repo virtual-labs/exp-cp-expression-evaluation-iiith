@@ -11,11 +11,12 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect, 2 * 3 = 6, 5 % 3 = 2, 6 + 2 = 8, so 1 is not correct.",
-        "b": "Incorrect, 2 * 3 = 6, 5 % 3 = 2, 6 + 2 = 8, so 7 is not correct.",
+        "a": "Incorrect. This is not the result of the calculation.",
+        "b": "Incorrect. This is not the result of the calculation.",
         "c": "Correct. 2 * 3 = 6, 5 % 3 = 2, 6 + 2 = 8, so 8 is correct.",
-        "d": "Incorrect, 2 * 3 = 6, 5 % 3 = 2, 6 + 2 = 8, so 2 is not correct."
-      }
+        "d": "Incorrect. This is not the result of the calculation."
+      },
+      "difficulty": "beginner"
     },
     {
       "question": "2. Evaluate ( 2 * ( 3 + 5 ) ) % 3.",
@@ -28,10 +29,11 @@
       "correctAnswer": "a",
       "explanations": {
         "a": "Correct. 3 + 5 = 8, 2 * 8 = 16, 16 % 3 = 1, so 1 is correct.",
-        "b": "Incorrect, 3 + 5 = 8, 2 * 8 = 16, 16 % 3 = 1, so 7 is not correct.",
-        "c": "Incorrect, 3 + 5 = 8, 2 * 8 = 16, 16 % 3 = 1, so 8 is not correct.",
-        "d": "Incorrect, 3 + 5 = 8, 2 * 8 = 16, 16 % 3 = 1, so 4 is not correct."
-      }
+        "b": "Incorrect. This is not the result of the calculation.",
+        "c": "Incorrect. This is not the result of the calculation.",
+        "d": "Incorrect. This is not the result of the calculation."
+      },
+      "difficulty": "beginner"
     },
     {
       "question": "3. The order of evaluation of the operators in ( 2 * ( 3 + 5 ) ) % 3 is:",
@@ -44,10 +46,11 @@
       "correctAnswer": "a",
       "explanations": {
         "a": "Correct. Parentheses first, so +, then *, then %.",
-        "b": "Incorrect, * is not evaluated before + due to parentheses.",
-        "c": "Incorrect, % is evaluated last, not first.",
-        "d": "Incorrect, 4 is not an operator order."
-      }
+        "b": "Incorrect. This is not the correct order.",
+        "c": "Incorrect. This is not the correct order.",
+        "d": "Incorrect. This is not the correct order."
+      },
+      "difficulty": "beginner"
     },
     {
       "question": "4. The order of evaluation of the operators in 2 * ( 3 + 5 ) % 3 is:",
@@ -60,10 +63,11 @@
       "correctAnswer": "a",
       "explanations": {
         "a": "Correct. Parentheses first, so +, then *, then %.",
-        "b": "Incorrect, * is not evaluated before + due to parentheses.",
-        "c": "Incorrect, % is evaluated last, not first.",
-        "d": "Incorrect, +, %, * is not the correct order."
-      }
+        "b": "Incorrect. This is not the correct order.",
+        "c": "Incorrect. This is not the correct order.",
+        "d": "Incorrect. This is not the correct order."
+      },
+      "difficulty": "beginner"
     },
     {
       "question": "5. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4. Calculate x % y",
@@ -76,10 +80,11 @@
       "correctAnswer": "a",
       "explanations": {
         "a": "Correct. 8.8 % 3.5 = 1.8 (modulus operation for floats).",
-        "b": "Incorrect, 3.5 is the divisor, not the result.",
-        "c": "Incorrect, 8.8 % 3.5 = 1.8, not 0.8.",
-        "d": "Incorrect, 7 is not the result of 8.8 % 3.5."
-      }
+        "b": "Incorrect. This is not the result of the calculation.",
+        "c": "Incorrect. This is not the result of the calculation.",
+        "d": "Incorrect. This is not the result of the calculation."
+      },
+      "difficulty": "intermediate"
     },
     {
       "question": "6. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4, Calculate x % m",
@@ -91,11 +96,12 @@
       },
       "correctAnswer": "d",
       "explanations": {
-        "a": "Incorrect, 8.8 % 4 = 0.8, not 8.",
-        "b": "Incorrect, 4 is the divisor, not the result.",
-        "c": "Incorrect, 8.8 % 4 = 0.8, not 1.8.",
+        "a": "Incorrect. This is not the result of the calculation.",
+        "b": "Incorrect. This is not the result of the calculation.",
+        "c": "Incorrect. This is not the result of the calculation.",
         "d": "Correct. 8.8 % 4 = 0.8, so 0.8 is correct."
-      }
+      },
+      "difficulty": "intermediate"
     },
     {
       "question": "7. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4, Calculate 7/m",
@@ -107,11 +113,12 @@
       },
       "correctAnswer": "b",
       "explanations": {
-        "a": "Incorrect, 7 / 4 = 1.75, integer division gives 1, not 0.",
+        "a": "Incorrect. This is not the result of the calculation.",
         "b": "Correct. 7 / 4 = 1.75, integer division gives 1.",
-        "c": "Incorrect, 7 / 4 = 1.75, integer division gives 1, not 2.",
-        "d": "Incorrect, 7 / 4 = 1.75, integer division gives 1, not 3."
-      }
+        "c": "Incorrect. This is not the result of the calculation.",
+        "d": "Incorrect. This is not the result of the calculation."
+      },
+      "difficulty": "intermediate"
     },
     {
       "question": "8. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4, Calculate 2 * x / (3 * y)",
@@ -124,10 +131,11 @@
       "correctAnswer": "a",
       "explanations": {
         "a": "Correct. 3 * 3.5 = 10.5, 2 * 8.8 = 17.6, 17.6 / 10.5 ≈ 1.67.",
-        "b": "Incorrect, 17.6 / 10.5 ≈ 1.67, not 2.",
-        "c": "Incorrect, 17.6 / 10.5 ≈ 1.67, not 1.",
-        "d": "Incorrect, 17.6 / 10.5 ≈ 1.67, not 1.5."
-      }
+        "b": "Incorrect. This is not the result of the calculation.",
+        "c": "Incorrect. This is not the result of the calculation.",
+        "d": "Incorrect. This is not the result of the calculation."
+      },
+      "difficulty": "advanced"
     },
     {
       "question": "9. Assume x = 8.8, y = 3.5 and z = -5.2 and m = 4, Calculate 2 * x / 3 * y",
@@ -139,11 +147,12 @@
       },
       "correctAnswer": "b",
       "explanations": {
-        "a": "Incorrect, 2 * 8.8 = 17.6, 17.6 / 3 = 5.867, 5.867 * 3.5 = 20.534, so 5.86 is not correct.",
+        "a": "Incorrect. This is not the result of the calculation.",
         "b": "Correct. 2 * 8.8 = 17.6, 17.6 / 3 = 5.867, 5.867 * 3.5 = 20.534, so 20.51 is correct (rounded).",
-        "c": "Incorrect, 2 * 8.8 = 17.6, 17.6 / 3 = 5.867, 5.867 * 3.5 = 20.534, so 1.67 is not correct.",
-        "d": "Incorrect, 2 * 8.8 = 17.6, 17.6 / 3 = 5.867, 5.867 * 3.5 = 20.534, so 1 is not correct."
-      }
+        "c": "Incorrect. This is not the result of the calculation.",
+        "d": "Incorrect. This is not the result of the calculation."
+      },
+      "difficulty": "advanced"
     }
   ]
 }
