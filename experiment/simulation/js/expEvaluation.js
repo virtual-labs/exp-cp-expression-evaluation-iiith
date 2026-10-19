@@ -23,7 +23,6 @@ window.model = {
 		if(isexpfinished == 1)
 			return [-1, -1]
 		var sub;
-		var symbols = ['%', '*', '/', '-', '+'];
 		var closeindex = expression.indexOf(')');
 
 		if( closeindex != -1) {    // finding the part in bracket to be highlighted
@@ -39,51 +38,65 @@ window.model = {
 		}
 		else sub = expression;
 		var start, end, a, b, c;
-		for ( j = 0 ; j < symbols.length ; j++ ) {
-			var found = 0;
-			for ( i = 0 ; i < sub.length ; i++ ) {
-				if(sub[i] == symbols[j]) {
-					var tmp = i;
-					a = 0;
-					var unary = 0;
-					if( i==0 || (i!=0 && isNaN(sub[i-1])) ) {
-						continue;
-					}
-					if(sub[i+1] == '-')
-					{
-						unary = 1;
-						i++;
-					}
-					for( var end = i+1 ; end < sub.length && !isNaN(sub[end]) ; end++){
-						a = a*10 + parseInt(sub[end]);
-					}
-					if(unary == 1) {
-						i--;
-						a = -a;
-					}
-					unary = 0;
-					b = 0, ten = 1;
-					for( var start = tmp-1 ; start >= 0 && !isNaN(sub[start]) ; start--){
-						b = b + ten*parseInt(sub[start]);
-						ten *= 10;
-					}
-					if(start==0 && sub[start] == '-') {
-						b = -b;
-						start--;
-					}
-					else if(start > 0 && sub[start] == '-' && isNaN(sub[start])) {
-						b = -b;
-						start--;
-					}
-					found = 1;
-					break;
-				}
+		var found = 0;
+		var tmp = -1;
+		var highestPrecedence = -1;
+		var operators = {
+			'+': 1,
+			'-': 1,
+			'*': 2,
+			'/': 2,
+			'%': 2
+		};
+
+		for ( i = 0 ; i < sub.length ; i++ ) {
+			var ch = sub[i];
+			var precedence = operators[ch];
+			if (precedence === undefined) {
+				continue;
 			}
-			if(found == 1)
-				break;
+			if (ch == '-' && (i == 0 || isNaN(sub[i-1]))) {
+				continue;
+			}
+			if (precedence > highestPrecedence) {
+				highestPrecedence = precedence;
+				tmp = i;
+			}
 		}
-		if(found == 0){
+
+		if (tmp == -1) {
 			return [offset, offset+sub.length-1];
+		}
+
+		found = 1;
+		i = tmp;
+		a = 0;
+		var unary = 0;
+		if(sub[i+1] == '-')
+		{
+			unary = 1;
+			i++;
+		}
+		for( end = i+1 ; end < sub.length && !isNaN(sub[end]) ; end++){
+			a = a*10 + parseInt(sub[end]);
+		}
+		if(unary == 1) {
+			i--;
+			a = -a;
+		}
+		unary = 0;
+		b = 0, ten = 1;
+		for( start = tmp-1 ; start >= 0 && !isNaN(sub[start]) ; start--){
+			b = b + ten*parseInt(sub[start]);
+			ten *= 10;
+		}
+		if(start==0 && sub[start] == '-') {
+			b = -b;
+			start--;
+		}
+		else if(start > 0 && sub[start] == '-' && isNaN(sub[start])) {
+			b = -b;
+			start--;
 		}
 		return [offset+start+1, offset+end-1];
 	},
@@ -892,10 +905,29 @@ window.view = {
     }
 
     if (foundOperator) {
-        const explanation = createExplanation(
-            highestPrecedence === 2 
+        const hasAddSubPair = eq.indexOf('+') !== -1 && eq.indexOf('-') !== -1;
+        const hasMulDivModPair =
+            (eq.indexOf('*') !== -1 && eq.indexOf('/') !== -1) ||
+            (eq.indexOf('*') !== -1 && eq.indexOf('%') !== -1) ||
+            (eq.indexOf('/') !== -1 && eq.indexOf('%') !== -1);
+
+        let explanationText;
+        if (highestPrecedence === 2 && hasMulDivModPair) {
+            explanationText = this.step-1+')' +" " +
+                `Multiplication, division, and modulo have the same precedence and are evaluated from left to right. So ${operators[foundOperator].name} (${foundOperator}) will be processed first here.`;
+        }
+        else if (highestPrecedence === 1 && hasAddSubPair) {
+            explanationText = this.step-1+')' +" " +
+                `Addition and subtraction have the same precedence and are evaluated from left to right. So ${operators[foundOperator].name} (${foundOperator}) will be processed first here.`;
+        }
+        else {
+            explanationText = highestPrecedence === 2
                 ? this.step-1+')' +" "+`The ${operators[foundOperator].name} operator (${foundOperator}) has higher precedence than other operators and will be processed.`
-                : this.step-1+')' +" "+ `Now the ${operators[foundOperator].name} operator (${foundOperator}) will be processed.`
+                : this.step-1+')' +" "+ `Now the ${operators[foundOperator].name} operator (${foundOperator}) will be processed.`;
+        }
+
+        const explanation = createExplanation(
+            explanationText
         );
         step.appendChild(explanation);
     }
